@@ -44,7 +44,7 @@ void calcResult(int user, int computer){
         printf("Paper smothers Rock\nYou win!!\n");
     }
     if(user==2 && computer==3){
-        printf("Paperis slashed up by Scissors\nYou lose!!\n");
+        printf("Paper is slashed up by Scissors\nYou lose!!\n");
     }
 
     if (user==3 && computer==1){
@@ -83,6 +83,17 @@ int main() {
 
     // display result
     calcResult(userChoice, computerChoice);
+
+    // replay mechanics
+    sleep(1);
+    char replay;
+    printf("Do you want to play again? (y/n): ");
+    scanf(" %c", &replay);
+
+    if (replay=='y'){
+        printf("\n\n");
+        main();
+    }
 
     return 0;
 }
